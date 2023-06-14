@@ -13,6 +13,7 @@
 		BD7CE6F42A38D6D7008C6A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE6F22A38D6D7008C6A1D /* Main.storyboard */; };
 		BD7CE6F62A38D6DA008C6A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE6F52A38D6DA008C6A1D /* Assets.xcassets */; };
 		BD7CE6F92A38D6DA008C6A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE6F72A38D6DA008C6A1D /* LaunchScreen.storyboard */; };
+		BD7CE7072A3A52B2008C6A1D /* bee.png in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE7062A3A52B2008C6A1D /* bee.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD7CE6F52A38D6DA008C6A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD7CE6F82A38D6DA008C6A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD7CE6FA2A38D6DA008C6A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD7CE7062A3A52B2008C6A1D /* bee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bee.png; path = ../../../../../../Downloads/bee.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		BD7CE6EB2A38D6D7008C6A1D /* Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				BD7CE7062A3A52B2008C6A1D /* bee.png */,
 				BD7CE6EC2A38D6D7008C6A1D /* AppDelegate.swift */,
 				BD7CE6EE2A38D6D7008C6A1D /* SceneDelegate.swift */,
 				BD7CE6F02A38D6D7008C6A1D /* ViewController.swift */,
@@ -127,6 +130,7 @@
 			files = (
 				BD7CE6F92A38D6DA008C6A1D /* LaunchScreen.storyboard in Resources */,
 				BD7CE6F62A38D6DA008C6A1D /* Assets.xcassets in Resources */,
+				BD7CE7072A3A52B2008C6A1D /* bee.png in Resources */,
 				BD7CE6F42A38D6D7008C6A1D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
