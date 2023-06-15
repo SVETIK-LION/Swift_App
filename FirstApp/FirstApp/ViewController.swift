@@ -20,16 +20,27 @@ class ViewController: UIViewController {
     
     var button = UIButton()
     var button1 = UIButton()
+    var button2 = UIButton()
+    var button3 = UIButton()
+    
     var isTapped = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupButton()
-        setupButton1()
+        setupButton(button: &button, text: "Перейти на NextViewController")
+        setupButton(button: &button1, text: "Изменить цвет")
+        setupButton(button: &button2, text: "Перейти на TableViewController")
+        setupButton(button: &button3, text: "Перейти на  CollectionViewController")
+        
+        addButtonTarget()
+        
         view.addSubview(labelOne)
         view.addSubview(button)
         view.addSubview(button1)
+        view.addSubview(button2)
+        view.addSubview(button3)
+        
         setupConstraints()
     }
     
@@ -37,6 +48,9 @@ class ViewController: UIViewController {
         labelOne.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button1.translatesAutoresizingMaskIntoConstraints = false
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        button3.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             labelOne.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             labelOne.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -48,35 +62,44 @@ class ViewController: UIViewController {
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            button1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            button1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 40),
             button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button1.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             button1.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            button2.topAnchor.constraint(equalTo: button1.bottomAnchor, constant: 40),
+            button2.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button2.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            button2.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            button3.topAnchor.constraint(equalTo: button2.bottomAnchor, constant: 40),
+            button3.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button3.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            button3.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
     
-    private func setupButton() {
-        button.setTitle("YAHOOOOOOO!!!!", for: .normal)
+    private func setupButton(button: inout UIButton, text: String) {
+        button.setTitle(text, for: .normal)
         button.setTitleColor(.purple, for: .normal)
         button.setTitleColor(.systemPink, for: .highlighted)
         button.backgroundColor = .yellow
+    }
+    
+    private func addButtonTarget() {
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
+        button1.addTarget(self, action: #selector(tapButton1), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(tapButton2), for: .touchUpInside)
+        button3.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
     }
     
-    private func setupButton1() {
-        button.setTitle("MEOW-MEOW!!!!", for: .normal)
-        button.setTitleColor(.purple, for: .normal)
-        button.setTitleColor(.systemPink, for: .highlighted)
-        button.backgroundColor = .yellow
-        button.addTarget(self, action: #selector(tapButton1), for: .touchUpInside)
-    }
     
-    @objc func tapButton () {
+    @objc func tapButton() {
         navigationController?.pushViewController(NextViewController(), animated: true)
     }
     
     
-    @objc func tapButton1 () {
+    @objc func tapButton1() {
         isTapped.toggle()
         if isTapped {
             view.backgroundColor = .yellow
@@ -84,4 +107,9 @@ class ViewController: UIViewController {
             view.backgroundColor = .white
         }
     }
+    
+    @objc func tapButton2() {
+        navigationController?.pushViewController(TableViewController(), animated: true)
+    }
+    
 }

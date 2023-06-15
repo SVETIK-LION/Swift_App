@@ -13,6 +13,8 @@
 		BD7CE67A2A325321008C6A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE6792A325321008C6A1D /* Assets.xcassets */; };
 		BD7CE67D2A325321008C6A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7CE67B2A325321008C6A1D /* LaunchScreen.storyboard */; };
 		BD7CE6852A35A9B8008C6A1D /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE6842A35A9B8008C6A1D /* NextViewController.swift */; };
+		BD7CE7092A3B7726008C6A1D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7082A3B7726008C6A1D /* TableViewController.swift */; };
+		BD7CE70B2A3B7B5E008C6A1D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE70A2A3B7B5E008C6A1D /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BD7CE67C2A325321008C6A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD7CE67E2A325321008C6A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD7CE6842A35A9B8008C6A1D /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		BD7CE7082A3B7726008C6A1D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BD7CE70A2A3B7B5E008C6A1D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		BD7CE66F2A32531E008C6A1D /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD7CE7082A3B7726008C6A1D /* TableViewController.swift */,
+				BD7CE70A2A3B7B5E008C6A1D /* CustomTableViewCell.swift */,
 				BD7CE6702A32531E008C6A1D /* AppDelegate.swift */,
 				BD7CE6722A32531E008C6A1D /* SceneDelegate.swift */,
 				BD7CE6742A32531E008C6A1D /* ViewController.swift */,
@@ -137,9 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7CE70B2A3B7B5E008C6A1D /* CustomTableViewCell.swift in Sources */,
 				BD7CE6752A32531E008C6A1D /* ViewController.swift in Sources */,
 				BD7CE6852A35A9B8008C6A1D /* NextViewController.swift in Sources */,
 				BD7CE6712A32531E008C6A1D /* AppDelegate.swift in Sources */,
+				BD7CE7092A3B7726008C6A1D /* TableViewController.swift in Sources */,
 				BD7CE6732A32531E008C6A1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
