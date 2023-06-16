@@ -2,6 +2,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addButtonTarget()
+        view.backgroundColor = .white
+        view.addSubview(logoView)
+        view.addSubview(authView)
+        view.addSubview(userView)
+        view.addSubview(passwordView)
+        view.addSubview(welcomeButton)
+        setupConstraints()
+        
+    }
+    
     var logoView: UIImageView = {
         let logoView = UIImageView()
         logoView.image = UIImage(named: "Uni.jpeg")
@@ -38,39 +51,24 @@ class ViewController: UIViewController {
         passwordView.textColor = .white
         passwordView.textAlignment = .center
         passwordView.font = .systemFont(ofSize: 24)
-        
         return passwordView
     }()
     
-    var welcomeView: UILabel = {
-        let welcomeView = UILabel()
-        welcomeView.backgroundColor = .purple
-        welcomeView.text = "log in".uppercased()
-        welcomeView.font = .systemFont(ofSize: 24)
-        welcomeView.textAlignment = .center
-        welcomeView.textColor = .white
-        
-        return welcomeView
+    var welcomeButton: UIButton = {
+        let welcomeButton = UIButton()
+        welcomeButton.backgroundColor = .purple
+        welcomeButton.setTitle("log in".uppercased(), for: .normal)
+        welcomeButton.setTitleColor(.white, for: .normal)
+        welcomeButton.setTitleColor(.systemPink, for: .highlighted)
+        return welcomeButton
     }()
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(logoView)
-        view.addSubview(authView)
-        view.addSubview(userView)
-        view.addSubview(passwordView)
-        view.addSubview(welcomeView)
-        setupConstraints()
-    }
     
     private func setupConstraints() {
         logoView.translatesAutoresizingMaskIntoConstraints = false
         authView.translatesAutoresizingMaskIntoConstraints = false
         userView.translatesAutoresizingMaskIntoConstraints = false
         passwordView.translatesAutoresizingMaskIntoConstraints = false
-        welcomeView.translatesAutoresizingMaskIntoConstraints = false
+        welcomeButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             logoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -93,14 +91,23 @@ class ViewController: UIViewController {
             passwordView.widthAnchor.constraint(equalToConstant: view.frame.size.width / 1.5),
             passwordView.heightAnchor.constraint(equalToConstant: view.frame.size.width / 7),
             
-            welcomeView.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 60),
-            welcomeView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            welcomeView.widthAnchor.constraint(equalToConstant: view.frame.size.width / 2),
-            welcomeView.heightAnchor.constraint(equalToConstant: view.frame.size.width / 5),
+            welcomeButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 60),
+            welcomeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            welcomeButton.widthAnchor.constraint(equalToConstant: view.frame.size.width / 2),
+            welcomeButton.heightAnchor.constraint(equalToConstant: view.frame.size.width / 5),
             
         ])
     }
-
+    
+    private func addButtonTarget() {
+        welcomeButton.addTarget(self, action: #selector(tapWelcomeButton), for: .touchUpInside)
+    }
+    
+    @objc func tapWelcomeButton() {
+        navigationController?.pushViewController(TableViewController(), animated: true)
+    }
+    
+    
 
 }
 
