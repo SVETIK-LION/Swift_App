@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var labelOne: UILabel = {
+    private var labelOne: UILabel = {
         let labelOne = UILabel()
         labelOne.text = "My first application!"
         labelOne.backgroundColor = .systemPink
@@ -18,12 +18,12 @@ class ViewController: UIViewController {
         return labelOne
     }()
     
-    var button = UIButton()
-    var button1 = UIButton()
-    var button2 = UIButton()
-    var button3 = UIButton()
+    private var button = UIButton()
+    private var button1 = UIButton()
+    private var button2 = UIButton()
+    private var button3 = UIButton()
     
-    var isTapped = false
+    private var isTapped = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         button1.addTarget(self, action: #selector(tapButton1), for: .touchUpInside)
         button2.addTarget(self, action: #selector(tapButton2), for: .touchUpInside)
-        button3.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
+        button3.addTarget(self, action: #selector(tapButton3), for: .touchUpInside)
     }
     
     
@@ -110,6 +110,10 @@ class ViewController: UIViewController {
     
     @objc func tapButton2() {
         navigationController?.pushViewController(TableViewController(), animated: true)
+    }
+    
+    @objc func tapButton3() {
+        navigationController?.pushViewController(ColectionViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
     }
     
 }

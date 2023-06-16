@@ -10,7 +10,7 @@ class CustomTableViewCell: UITableViewCell {
         return roundLabel
     }()
     
-    var label1: UILabel = {
+    private var label1: UILabel = {
         let label1 = UILabel()
         label1.backgroundColor = .systemPink
         label1.textColor = .white
@@ -19,7 +19,7 @@ class CustomTableViewCell: UITableViewCell {
         return label1
     }()
     
-    var label2: UILabel = {
+    private var label2: UILabel = {
         let label2 = UILabel()
         label2.backgroundColor = .systemPink
         label2.textColor = .white
@@ -28,7 +28,7 @@ class CustomTableViewCell: UITableViewCell {
         return label2
     }()
     
-    var label3: UILabel = {
+    private var label3: UILabel = {
         let label3 = UILabel()
         label3.backgroundColor = .systemPink
         label3.textColor = .white
@@ -46,7 +46,7 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViews() {
+    private func setupViews() {
         contentView.addSubview(roundView)
         contentView.addSubview(label1)
         contentView.addSubview(label2)
@@ -55,7 +55,7 @@ class CustomTableViewCell: UITableViewCell {
         setupConstraints()
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         roundView.translatesAutoresizingMaskIntoConstraints = false
         label1.translatesAutoresizingMaskIntoConstraints = false
         label2.translatesAutoresizingMaskIntoConstraints = false

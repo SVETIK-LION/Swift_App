@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         passwordView.textColor = .white
         passwordView.textAlignment = .center
         passwordView.font = .systemFont(ofSize: 24)
+        passwordView.isSecureTextEntry = true
         return passwordView
     }()
     
