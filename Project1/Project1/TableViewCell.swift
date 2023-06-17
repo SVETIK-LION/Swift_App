@@ -1,11 +1,25 @@
 import UIKit
 
 
-class CustomTableViewCell: UITableViewCell {
+class TableViewCell: UITableViewCell {
+    
+    // ???
+    private var collectionViewController = UICollectionViewController(collectionViewLayout: CollectionViewController())
+    var clickTableCell: ((UICollectionViewController) -> Void)?
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     var circleImageView: UIImageView = {
         let circleImageView = UIImageView(frame: CGRectMake(0, 0, 100, 100))
-        circleImageView.image = UIImage(named: "Uni.jpeg")
+        circleImageView.image = UIImage(systemName: "person")
+        circleImageView.tintColor = .yellow
         circleImageView.layer.cornerRadius =  circleImageView.frame.size.width / 2.8
         circleImageView.layer.borderWidth = 1
         circleImageView.layer.masksToBounds = false
@@ -63,15 +77,8 @@ class CustomTableViewCell: UITableViewCell {
         setupConstraints()
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupViews()
+    // ???
+    @objc func clickOnTableCell() {
+        clickTableCell?(collectionViewController.collectionView ?? UICollectionViewController())
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    
 }

@@ -32,15 +32,15 @@ class ViewController: UIViewController {
     }()
 
     var userView: UITextField = {
-        let loginView = UITextField()
-        loginView.borderStyle = .roundedRect
-        loginView.backgroundColor = .systemPink
-        loginView.placeholder = "Username"
-        loginView.textColor = .white
-        loginView.textAlignment = .center
-        loginView.font = .systemFont(ofSize: 24)
+        let userView = UITextField()
+        userView.borderStyle = .roundedRect
+        userView.backgroundColor = .systemPink
+        userView.placeholder = "Username"
+        userView.textColor = .white
+        userView.textAlignment = .center
+        userView.font = .systemFont(ofSize: 24)
         
-        return loginView
+        return userView
     }()
     
     var passwordView: UITextField = {
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         welcomeButton.backgroundColor = .purple
         welcomeButton.setTitle("log in".uppercased(), for: .normal)
         welcomeButton.setTitleColor(.white, for: .normal)
-        welcomeButton.setTitleColor(.systemPink, for: .highlighted)
+        welcomeButton.setTitleColor(.systemYellow, for: .highlighted)
         return welcomeButton
     }()
     

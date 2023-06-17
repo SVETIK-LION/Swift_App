@@ -3,6 +3,11 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
@@ -12,11 +17,8 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        CustomTableViewCell()
+        TableViewCell()
     }
     
-    override func viewDidLoad() {
-        view.backgroundColor = .white
-    }
     
 }

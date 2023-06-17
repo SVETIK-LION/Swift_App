@@ -16,6 +16,7 @@ class ColectionViewController: UICollectionViewController {
         guard let cell = cell as? CollectionViewCell else {
             return UICollectionViewCell()
         }
+        
         cell.clickCell = { [weak self] image in
             self?.navigationController?.pushViewController(ImageViewController(image: image), animated: true)
         }
