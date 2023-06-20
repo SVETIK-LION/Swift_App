@@ -3,13 +3,13 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    // ???
-    private var collectionViewController = UICollectionViewController(collectionViewLayout: CollectionViewController())
-    var clickTableCell: ((UICollectionViewController) -> Void)?
+    var clickTableCell: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(clickOnTableCell))
+        addGestureRecognizer(gestureRecognizer)
     }
     
     required init?(coder: NSCoder) {
@@ -77,8 +77,7 @@ class TableViewCell: UITableViewCell {
         setupConstraints()
     }
     
-    // ???
     @objc func clickOnTableCell() {
-        clickTableCell?(collectionViewController.collectionView ?? UICollectionViewController())
+        clickTableCell?()
     }
 }

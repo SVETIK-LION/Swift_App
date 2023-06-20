@@ -48,8 +48,6 @@
 		BD7CE6C02A38D563008C6A1D = {
 			isa = PBXGroup;
 			children = (
-				BD7CE7162A3D7F37008C6A1D /* CollectionViewController.swift */,
-				BD7CE7182A3D8082008C6A1D /* CollectionViewCell.swift */,
 				BD7CE6CB2A38D563008C6A1D /* Project1 */,
 				BD7CE6CA2A38D563008C6A1D /* Products */,
 			);
@@ -66,6 +64,8 @@
 		BD7CE6CB2A38D563008C6A1D /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				BD7CE7162A3D7F37008C6A1D /* CollectionViewController.swift */,
+				BD7CE7182A3D8082008C6A1D /* CollectionViewCell.swift */,
 				BD7CE6CC2A38D563008C6A1D /* AppDelegate.swift */,
 				BD7CE6CE2A38D563008C6A1D /* SceneDelegate.swift */,
 				BD7CE6D02A38D563008C6A1D /* ViewController.swift */,

@@ -107,8 +107,4 @@ class ViewController: UIViewController {
     @objc func tapWelcomeButton() {
         navigationController?.pushViewController(TableViewController(), animated: true)
     }
-    
-    
-
 }
-

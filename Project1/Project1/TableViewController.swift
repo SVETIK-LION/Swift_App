@@ -17,8 +17,13 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        TableViewCell()
+        let cell = TableViewCell()
+        cell.clickTableCell = tapCell
+        return cell
     }
     
+    private func tapCell() {
+        navigationController?.pushViewController(CollectionViewController(collectionViewLayout: UICollectionViewFlowLayout()), animated: true)
+    }
     
 }
