@@ -18,6 +18,7 @@
 		BD7CE7172A3D7F37008C6A1D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7162A3D7F37008C6A1D /* CollectionViewController.swift */; };
 		BD7CE7192A3D8082008C6A1D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7182A3D8082008C6A1D /* CollectionViewCell.swift */; };
 		BD7CE7292A421253008C6A1D /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7282A421253008C6A1D /* MessagesView.swift */; };
+		BD7CE72B2A422BF8008C6A1D /* DialogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE72A2A422BF8008C6A1D /* DialogModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		BD7CE7162A3D7F37008C6A1D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BD7CE7182A3D8082008C6A1D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7CE7282A421253008C6A1D /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		BD7CE72A2A422BF8008C6A1D /* DialogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		BD7CE6CB2A38D563008C6A1D /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				BD7CE72A2A422BF8008C6A1D /* DialogModel.swift */,
 				BD7CE7282A421253008C6A1D /* MessagesView.swift */,
 				BD7CE7162A3D7F37008C6A1D /* CollectionViewController.swift */,
 				BD7CE7182A3D8082008C6A1D /* CollectionViewCell.swift */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7CE72B2A422BF8008C6A1D /* DialogModel.swift in Sources */,
 				BD7CE7292A421253008C6A1D /* MessagesView.swift in Sources */,
 				BD7CE7172A3D7F37008C6A1D /* CollectionViewController.swift in Sources */,
 				BD7CE6D12A38D563008C6A1D /* ViewController.swift in Sources */,

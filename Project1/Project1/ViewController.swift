@@ -1,6 +1,9 @@
 import UIKit
+import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
+    
+    private var session = URLSession.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,9 +14,28 @@ class ViewController: UIViewController {
         view.addSubview(userView)
         view.addSubview(passwordView)
         view.addSubview(welcomeButton)
+        
+        let url: URL? = URL(string: "https://oauth.vk.com/authorize?client_id=1&redirect_uri=http://example.com/callback&scope=12&display=mobile")
+        session.dataTask(with: url!) { (data, _, error) in
+            guard let data = data else {return}
+            do {
+                let dialog = try JSONDecoder().decode([DialogModel].self, from: data)
+                print(dialog)
+            } catch {
+                print(error)
+            }
+        }.resume()
+        webView.load(URLRequest(url: url!))
+        
         setupConstraints()
         
     }
+    
+    private lazy var webView: WKWebView = {
+        let webView = WKWebView()
+        webView.navigationDelegate = self
+        return webView
+    }()
     
     var logoView: UIImageView = {
         let logoView = UIImageView()
