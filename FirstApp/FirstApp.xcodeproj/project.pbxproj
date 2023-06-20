@@ -64,16 +64,6 @@
 		BD7CE6642A32531E008C6A1D = {
 			isa = PBXGroup;
 			children = (
-				BD7CE7242A40E06F008C6A1D /* UIImageView+Extension.swift */,
-				BD7CE7262A40E1B4008C6A1D /* ImageModel.swift */,
-				BD7CE7222A40DC3A008C6A1D /* MoviesModel.swift */,
-				BD7CE7202A40D7F7008C6A1D /* PlacesModel.swift */,
-				BD7CE71E2A40CEBE008C6A1D /* NewsModel.swift */,
-				BD7CE71A2A3F1831008C6A1D /* NetworkService.swift */,
-				BD7CE71C2A3F231D008C6A1D /* TownModel.swift */,
-				BD7CE7142A3CD1D0008C6A1D /* ImageViewController.swift */,
-				BD7CE7102A3CC86A008C6A1D /* CollectionViewController.swift */,
-				BD7CE7122A3CCA6F008C6A1D /* CollectionViewCell.swift */,
 				BD7CE66F2A32531E008C6A1D /* FirstApp */,
 				BD7CE66E2A32531E008C6A1D /* Products */,
 			);
@@ -90,6 +80,16 @@
 		BD7CE66F2A32531E008C6A1D /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD7CE7242A40E06F008C6A1D /* UIImageView+Extension.swift */,
+				BD7CE7262A40E1B4008C6A1D /* ImageModel.swift */,
+				BD7CE7222A40DC3A008C6A1D /* MoviesModel.swift */,
+				BD7CE7202A40D7F7008C6A1D /* PlacesModel.swift */,
+				BD7CE71E2A40CEBE008C6A1D /* NewsModel.swift */,
+				BD7CE71A2A3F1831008C6A1D /* NetworkService.swift */,
+				BD7CE71C2A3F231D008C6A1D /* TownModel.swift */,
+				BD7CE7142A3CD1D0008C6A1D /* ImageViewController.swift */,
+				BD7CE7102A3CC86A008C6A1D /* CollectionViewController.swift */,
+				BD7CE7122A3CCA6F008C6A1D /* CollectionViewCell.swift */,
 				BD7CE7082A3B7726008C6A1D /* TableViewController.swift */,
 				BD7CE70A2A3B7B5E008C6A1D /* CustomTableViewCell.swift */,
 				BD7CE6702A32531E008C6A1D /* AppDelegate.swift */,
