@@ -18,6 +18,13 @@
 		BD7CE7112A3CC86A008C6A1D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7102A3CC86A008C6A1D /* CollectionViewController.swift */; };
 		BD7CE7132A3CCA6F008C6A1D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7122A3CCA6F008C6A1D /* CollectionViewCell.swift */; };
 		BD7CE7152A3CD1D0008C6A1D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7142A3CD1D0008C6A1D /* ImageViewController.swift */; };
+		BD7CE71B2A3F1831008C6A1D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE71A2A3F1831008C6A1D /* NetworkService.swift */; };
+		BD7CE71D2A3F231D008C6A1D /* TownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE71C2A3F231D008C6A1D /* TownModel.swift */; };
+		BD7CE71F2A40CEBE008C6A1D /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE71E2A40CEBE008C6A1D /* NewsModel.swift */; };
+		BD7CE7212A40D7F7008C6A1D /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7202A40D7F7008C6A1D /* PlacesModel.swift */; };
+		BD7CE7232A40DC3A008C6A1D /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7222A40DC3A008C6A1D /* MoviesModel.swift */; };
+		BD7CE7252A40E06F008C6A1D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7242A40E06F008C6A1D /* UIImageView+Extension.swift */; };
+		BD7CE7272A40E1B4008C6A1D /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7CE7262A40E1B4008C6A1D /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		BD7CE7102A3CC86A008C6A1D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BD7CE7122A3CCA6F008C6A1D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		BD7CE7142A3CD1D0008C6A1D /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		BD7CE71A2A3F1831008C6A1D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BD7CE71C2A3F231D008C6A1D /* TownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownModel.swift; sourceTree = "<group>"; };
+		BD7CE71E2A40CEBE008C6A1D /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		BD7CE7202A40D7F7008C6A1D /* PlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
+		BD7CE7222A40DC3A008C6A1D /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		BD7CE7242A40E06F008C6A1D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		BD7CE7262A40E1B4008C6A1D /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +64,13 @@
 		BD7CE6642A32531E008C6A1D = {
 			isa = PBXGroup;
 			children = (
+				BD7CE7242A40E06F008C6A1D /* UIImageView+Extension.swift */,
+				BD7CE7262A40E1B4008C6A1D /* ImageModel.swift */,
+				BD7CE7222A40DC3A008C6A1D /* MoviesModel.swift */,
+				BD7CE7202A40D7F7008C6A1D /* PlacesModel.swift */,
+				BD7CE71E2A40CEBE008C6A1D /* NewsModel.swift */,
+				BD7CE71A2A3F1831008C6A1D /* NetworkService.swift */,
+				BD7CE71C2A3F231D008C6A1D /* TownModel.swift */,
 				BD7CE7142A3CD1D0008C6A1D /* ImageViewController.swift */,
 				BD7CE7102A3CC86A008C6A1D /* CollectionViewController.swift */,
 				BD7CE7122A3CCA6F008C6A1D /* CollectionViewCell.swift */,
@@ -152,6 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7CE7252A40E06F008C6A1D /* UIImageView+Extension.swift in Sources */,
+				BD7CE7212A40D7F7008C6A1D /* PlacesModel.swift in Sources */,
+				BD7CE71F2A40CEBE008C6A1D /* NewsModel.swift in Sources */,
+				BD7CE71B2A3F1831008C6A1D /* NetworkService.swift in Sources */,
 				BD7CE70B2A3B7B5E008C6A1D /* CustomTableViewCell.swift in Sources */,
 				BD7CE7152A3CD1D0008C6A1D /* ImageViewController.swift in Sources */,
 				BD7CE6752A32531E008C6A1D /* ViewController.swift in Sources */,
@@ -159,8 +184,11 @@
 				BD7CE6852A35A9B8008C6A1D /* NextViewController.swift in Sources */,
 				BD7CE6712A32531E008C6A1D /* AppDelegate.swift in Sources */,
 				BD7CE7112A3CC86A008C6A1D /* CollectionViewController.swift in Sources */,
+				BD7CE7232A40DC3A008C6A1D /* MoviesModel.swift in Sources */,
+				BD7CE71D2A3F231D008C6A1D /* TownModel.swift in Sources */,
 				BD7CE7092A3B7726008C6A1D /* TableViewController.swift in Sources */,
 				BD7CE6732A32531E008C6A1D /* SceneDelegate.swift in Sources */,
+				BD7CE7272A40E1B4008C6A1D /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

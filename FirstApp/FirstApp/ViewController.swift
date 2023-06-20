@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     private var button2 = UIButton()
     private var button3 = UIButton()
     
+    private var networkService = NetworkService()
+    
     private var isTapped = false
 
     override func viewDidLoad() {
@@ -42,6 +44,12 @@ class ViewController: UIViewController {
         view.addSubview(button3)
         
         setupConstraints()
+        
+//        networkService.getData()
+//        networkService.getError(errorCode: 404)
+//        networkService.getNews()
+//        networkService.getPlaces()
+        networkService.getMovies()
     }
     
     private func setupConstraints() {

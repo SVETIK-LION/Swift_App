@@ -18,6 +18,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     private func setupViews() {
+        imageView.getImage()
         addSubview(imageView)
         setupConstraints()
     }
