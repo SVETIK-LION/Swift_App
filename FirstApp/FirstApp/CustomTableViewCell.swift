@@ -5,7 +5,7 @@ class CustomTableViewCell: UITableViewCell {
     var roundView: UIView = {
         let roundLabel = UIView()
         roundLabel.layer.cornerRadius = 25
-        roundLabel.backgroundColor = .systemPink
+//        roundLabel.backgroundColor = .systemPink
         
         return roundLabel
     }()
@@ -14,8 +14,6 @@ class CustomTableViewCell: UITableViewCell {
         let label1 = UILabel()
         label1.backgroundColor = .systemPink
         label1.textColor = .white
-        label1.text = "Label1"
-        
         return label1
     }()
     
@@ -23,8 +21,6 @@ class CustomTableViewCell: UITableViewCell {
         let label2 = UILabel()
         label2.backgroundColor = .systemPink
         label2.textColor = .white
-        label2.text = "Label2"
-        
         return label2
     }()
     
@@ -32,8 +28,6 @@ class CustomTableViewCell: UITableViewCell {
         let label3 = UILabel()
         label3.backgroundColor = .systemPink
         label3.textColor = .white
-        label3.text = "Label3"
-        
         return label3
     }()
     
@@ -81,5 +75,23 @@ class CustomTableViewCell: UITableViewCell {
             label3.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             
         ])
+    }
+    
+    func setCircleColor(lat: Double?, lon: Double?) {
+        guard let lat = lat, let lon = lon else {
+            roundView.backgroundColor = .gray
+            return
+        }
+        if lat + lon < 100 {
+            roundView.backgroundColor = UIColor(red: 51/255, green: 204/255, blue: 1, alpha: 1)
+        } else {
+            roundView.backgroundColor = UIColor(red: 204/255, green: 0/255, blue: 153/255, alpha: 1)
+        }
+    }
+    
+    func setTextForLabels(model: TownModel) {
+        label1.text = model.name
+        label2.text = model.timezone
+        label3.text = model.currency
     }
 }

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     private var button2 = UIButton()
     private var button3 = UIButton()
     
-    private var networkService = NetworkService()
+//    private var networkService = NetworkService()
     
     private var isTapped = false
 
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 //        networkService.getError(errorCode: 404)
 //        networkService.getNews()
 //        networkService.getPlaces()
-        networkService.getMovies()
+//        networkService.getMovies()
     }
     
     private func setupConstraints() {

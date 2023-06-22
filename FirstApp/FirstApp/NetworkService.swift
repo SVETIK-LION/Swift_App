@@ -4,13 +4,16 @@ import Foundation
 class NetworkService {
     private var session = URLSession.shared
     
-    func getData() {
+    func getData(handler: @escaping ([TownModel]) -> Void) {
         let url: URL? = URL(string: "https://kudago.com/public-api/v1.2/locations/?lang=ru&fields=timezone,name,currency,coords")
         
         session.dataTask(with: url!) { (data, _, error) in
-            guard let data = data else {return}
+            guard let data = data else {
+                return
+            }
             do {
                 let towns = try JSONDecoder().decode([TownModel].self, from: data)
+                handler(towns)
                 print(towns)
             } catch {
                 print(error)
