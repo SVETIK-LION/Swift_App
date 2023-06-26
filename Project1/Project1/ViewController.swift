@@ -4,44 +4,52 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     
     private var session = URLSession.shared
-    
-    // 1) Добавила WKWebView
+
     private lazy var webView: WKWebView = {
         let webView = WKWebView()
         webView.navigationDelegate = self
         return webView
     }()
+
+    
+    var req = URL(string: "https://oauth.vk.com/authorize?client_id=51689770&scope=262150&redirect_uri=https://vk.com/away.php?to=https://oauth.vk.com/blank.html&display=mobile&response_type=token")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        view.addSubview(webView) // Добавила webView на главное view
+        view.addSubview(webView)
+//        webView.frame = CGRect(x: 10, y: 10, width: 300, height: 600)
         
-        let url: URL? = URL(string: "https://oauth.vk.com/authorize?client_id=1&redirect_uri=http://example.com/callback&scope=12&display=mobile")
-        session.dataTask(with: url!) { (data, _, error) in
-            guard let data = data else {return}
-            do {
-                let dialog = try JSONDecoder().decode([DialogModel].self, from: data)
-                print(dialog)
-            } catch {
-                print(error)
-            }
-        }.resume()
-        webView.load(URLRequest(url: url!)) // Метод загрузки
+        webView.load(URLRequest(url: req!))
         
         setupConstraints()
     }
     
-    // 1) Что за метод func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void)  ? Как его реализовывать и зачем?
-    
-    // 1) Приложение создала, что делать с ID приложения? 51685230.
-    
-    // 2) Вообще не поняла. Наверное логичнее будет авторизацию делать ещ едо перехода к сообщениям, то есть во ViewController.
-    
-    // 3) Возможно стоит использовать getConversations - Возвращает список бесед пользователя.
-    
-    // 4) ...
-    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        guard let url = navigationResponse.response.url, url.path == "/blank.html",
+              let fragment = url.fragment else {
+            decisionHandler(.allow)
+            return
+        }
+        let params = fragment
+            .components(separatedBy: "&")
+            .map {$0.components(separatedBy: "=")}
+            .reduce([String: String]()) { result, param in
+                var dict = result
+                let key = param[0]
+                let value = param[1]
+                dict[key] = value
+                return dict
+            }
+        let token = params["access_token"]
+        let userID = params["user_id"]
+        print(token!)
+        print(userID!)
+        decisionHandler(.cancel)
+        webView.removeFromSuperview()
+        navigationController?.pushViewController(TableViewController(), animated: true)
+    }
+
     private func setupConstraints() {
         webView.translatesAutoresizingMaskIntoConstraints = false
         
